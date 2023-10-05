@@ -1,0 +1,966 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Saira:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Young+Serif&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2 {
+    font-family: 'Saira', sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(110, 73, 7);
+    border-bottom: 1px solid #ccc;
+}
+
+.img1 {
+    width: 200px;
+    height: 70px;
+    margin-left: 35px;
+    opacity: 0.7;
+}
+
+
+/* kermel shil bullets wsh7awit li bl ul  */
+
+ul {
+    list-style: none;
+}
+
+
+/* kermel shil lunderline tahet lklmet  */
+
+a {
+    text-decoration: none;
+}
+
+.header .nav {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(110, 73, 7);
+    border-bottom: 1px solid #3f3708;
+    display: flex;
+    /*badal maykoun block saro inline had ba3d  */
+    justify-content: space-between;
+    /*kermel nkhale linker bl ekher wl logo awal shi */
+    margin: auto;
+    z-index: 90;
+    position: fixed;
+}
+
+.header .nav ul {
+    display: flex;
+    /*kermel kmn a3melon inline ben ba3d */
+    justify-content: center;
+    align-items: center;
+    /* kermel yejo bnes navbar  */
+    padding: 2px 50px;
+}
+
+
+/* kermel a3mel lkhtout yale tahet linket  */
+
+
+/* :start */
+
+.header .nav ul li {
+    position: relative;
+}
+
+.header .nav ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background-color: red;
+    position: absolute;
+    left: 6px;
+    bottom: -7px;
+    transition: 0.5s;
+}
+
+.header .nav ul li:hover::after {
+    width: 80%;
+}
+
+
+/* end  */
+
+
+/* nba3ed linked an ba3d  */
+
+.header .nav ul a {
+    margin: 0px 10px;
+    color: rgb(255, 195, 152);
+    font-weight: 600;
+}
+
+
+/*content of first section*/
+
+.header .content-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/images/pexels-dids-2675050.jpg);
+    background-size: cover;
+    background-position: center;
+    margin-top: -8px;
+}
+
+.content-text h1 {
+    color: chocolate;
+    font-size: 40px;
+}
+
+.content-text span {
+    color: red;
+}
+
+.content-text p {
+    margin: 20px 0 40px;
+    font-size: 20px;
+    color: chocolate;
+}
+
+
+/*button for first section*/
+
+
+/*button for first section*/
+
+.content-button button {
+    width: 200px;
+    padding: 15px 0px;
+    text-align: center;
+    color: chocolate;
+    margin: 20px;
+    font-weight: bold;
+    border-radius: 25px;
+    border: 2px solid chocolate;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s;
+    /* Add transition for smoother color change */
+}
+
+
+/* Change the background color on hover */
+
+.content-button button:hover {
+    background-color: red;
+    /* Change this to the color you want on hover */
+    color: white;
+    /* Change this to the text color you want on hover */
+    transition: background-color 0.5s;
+    /* Add transition for smoother color change */
+}
+
+button:hover {
+    border: none;
+}
+
+
+/* start about us */
+
+#about,
+#services,
+#team,
+#blog {
+    padding: 6rem 0;
+    background-color: rgba(210, 105, 30, 0.1);
+}
+
+#about h2,
+#services h2,
+#team h2,
+#news h2 {
+    text-align: center;
+    font-size: 38px;
+    color: chocolate;
+    letter-spacing: 1px;
+}
+
+#about h2 span,
+#services h2 span,
+#team h2 span {
+    color: darkred;
+}
+
+#about hr,
+#services hr,
+#team hr,
+#news hr {
+    width: 180px;
+    height: 5px;
+    margin: auto;
+    background-color: rgba(223, 106, 60, 0.651);
+    margin-top: -3px;
+    margin-bottom: 10px;
+}
+
+.heading p {
+    width: fit-content;
+    margin: auto;
+    padding-left: 12px;
+    background-color: rgba(233, 150, 122, 0.2);
+}
+
+#about p i,
+#services p i {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+/* nsa8er ard lsoura  */
+
+#about .heading img,
+#services .heading img {
+    width: 120px;
+    height: 120px;
+    margin-left: 45%;
+}
+
+
+/* start bl row display  */
+
+
+/* start bl row display */
+
+#about .about-row,
+#services .about-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+    text-align: center;
+    column-gap: 2rem;
+    row-gap: 4rem;
+}
+
+#about .about-row .box,
+#services .about-row .box {
+    background-color: #fff;
+    padding: 30px 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: relative;
+}
+
+#about .about-row .box h3,
+#services .about-row .box h3 {
+    margin: 15px 0px;
+    color: goldenrod;
+}
+
+#about .about-row .box p,
+#services .about-row .box p {
+    font-family: 'Croissant One', cursive;
+}
+
+#about .about-row .box button {
+    border-radius: 25px;
+    color: rgb(170, 28, 3);
+    background-color: rgb(223, 214, 90);
+    font-size: 20px;
+    width: 120px;
+    height: 40px;
+    margin: 15px 0px;
+}
+
+#about .about-row .box button:hover {
+    background-color: firebrick;
+}
+
+#about .about-row .box .sp2 {
+    color: red;
+}
+
+
+/* la 2a3mel shafefye sawda yale fo2 kel mraba3 bade a3mel 3 sha8let hol taht l2 wesa bade etla3 and lbay lasese yale mno amalet elemet wyake howe #about .about-row .box wa3melo position relative  */
+
+#about .about-row .box::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: 0.5s;
+    /* Add 'opacity' property to the transition */
+}
+
+#about .about-row .box:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+
+/* CSS for increasing icon size */
+
+
+/* CSS for increasing icon size with !important */
+
+#about .about-row .ii,
+#services .about-row .ii {
+    font-size: 32px !important;
+    /* Increased icon size */
+}
+
+
+/*  start section portfolio  */
+
+#portfolio {
+    padding: 3rem 0;
+    background-color: rgba(210, 105, 30, 0.1);
+}
+
+#portfolio .container2 {
+    width: 80%;
+    margin: auto;
+}
+
+#portfolio .container2 h2 {
+    text-align: center;
+    font-size: 38px;
+    color: chocolate;
+    letter-spacing: 1px;
+}
+
+#portfolio hr {
+    width: 140px;
+    height: 5px;
+    margin: auto;
+    background-color: rgba(223, 106, 60, 0.651);
+    margin-top: -3px;
+    margin-bottom: 10px;
+}
+
+.team-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    column-gap: 2rem;
+    row-gap: 4rem;
+    margin-top: 50px;
+}
+
+.team-item {
+    background-color: rgba(10, 10, 10, 0.1);
+    padding: 18px 20px;
+    text-align: center;
+}
+
+.item-img {
+    margin: auto;
+    position: relative;
+}
+
+
+/* bade eloo yekhod img kel lard taba3 div img ya3ne soura tekhod kel lwidth tab3et lab item-img  */
+
+.item-img img {
+    width: 100%;
+}
+
+
+/* bas badk take3 shi fo2 soura aw fo2 shi tene bt7et positiob absolute la hawde leshya aw div lhamleton wrelative lal ab yale hamel ldiv lakhira  */
+
+.team-overley {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*overley ya3ne lon laswad bade ye yekhod 100% mn toul wared lsoura ma traked bl position lal ba2we ba3den mnzabeton */
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.team-overley i {
+    width: 30px;
+    height: 20px;
+    border: #3f3708 1px solid;
+    background-color: rgb(211, 193, 170);
+    margin-top: 50px;
+    visibility: hidden;
+}
+
+.team-overley h3 {
+    font-size: 20px;
+    color: rgb(219, 168, 147);
+    margin: 10px 0px;
+}
+
+.team-overley .team-info-tittle {
+    text-transform: uppercase;
+    padding: 7px 0px;
+    color: rgba(6, 55, 100, 0.74);
+}
+
+.team-overley .team-info p {
+    text-transform: capitalize;
+    color: rgb(241, 186, 114);
+    font-size: 15px;
+}
+
+.team-item:hover .team-overley i {
+    visibility: visible;
+}
+
+.team-item:hover .team-info-tittle {
+    color: rgb(252, 252, 252);
+}
+
+.team-item:hover .team-overley .team-info p {
+    color: rgb(255, 183, 2);
+}
+
+
+/* #portfolio .item-img::after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        opacity: 0;
+        transition: 0.5s;
+        /* Add 'opacity' property to the transition */
+
+
+}
+
+/*     
+    #portfolio .item-img:hover::after {
+        width: 100%;
+        height: 100%;
+        opacity: 0.8;
+    } */
+*/
+/* start section services */
+#services .container1,
+#courses.container1 {
+    width: 80%;
+    margin: auto;
+}
+#services .about-row h3 {
+    display: inline;
+}
+#services .about-row .box {
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+/* bas bade ef2os al box bya3tine eno keber bl hajem 1.05 wba3mel transition eno 0.3 s la ykbar al akhir  */
+#services .about-row .box:hover {
+    transform: scale(1.05);
+    cursor: pointer
+}
+#services .about-row .box:hover::after {
+    height: auto
+}
+#services .about-row .box:hover p {
+    visibility: visible;
+}
+#services .about-row .box::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: 0.5s;
+    /* Add 'opacity' property to the transition */
+}
+#services .about-row .box:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+#courses {
+    padding: 2rem 0;
+    background-color: rgba(210, 105, 30, 0.1);
+}
+#courses {
+    width: 100%;
+    height: 100vh;
+}
+#courses h2 {
+    text-align: center;
+    margin-top: 80px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 32px;
+    color: chocolate;
+}
+#courses .linetittle {
+    margin: auto;
+    width: 140px;
+    height: 4px;
+    background-color: rgba(223, 106, 60, 0.651);
+    margin-top: 10px;
+}
+#courses .firstcontainer {
+    text-align: center;
+    height: 300px;
+    width: 300px;
+    background-color: none;
+    border: solid 2px;
+    border-bottom-left-radius: 10ch;
+    margin-top: 40px;
+}
+#courses .firstcontainer:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer
+}
+#courses .btn1 {
+    margin-top: 20px;
+}
+#courses button:hover {
+    background-color: rgb(182, 87, 64);
+}
+#courses button {
+    border-color: rgb(219, 215, 150);
+    color: rgb(63, 53, 5);
+    background-color: rgb(199, 145, 46);
+    height: 30px;
+    width: 120px;
+    border-bottom-left-radius: 5ch;
+}
+#courses .firstplan {
+    padding-top: 18px;
+}
+#courses .firstplan .fp1 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 900;
+    font-size: 20px
+}
+#courses .firstplan .fp2 {
+    font-size: 15px;
+    color: maroon;
+}
+#courses .firstcircle {
+    font-family: sans-serif;
+}
+#courses .firstcircle {
+    width: 120px;
+    height: 73px;
+    border: solid 2px;
+    border-color: rgb(130, 141, 141);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 20px;
+    font-style: oblique;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#courses .firstline {
+    margin-top: 1px;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#courses .secondline {
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+#courses .one {
+    float: left;
+    margin-left: 100px;
+}
+#courses .second {
+    float: left;
+    margin-left: 100px;
+}
+#courses .third {
+    float: left;
+    margin-left: 100px;
+}
+#courses .firstcircle:hover {
+    background-color: rgb(216, 140, 78);
+}
+
+/* end of courses section  */
+
+/* start of section team  */
+#team .container1 {
+    width: 80%;
+    margin: auto;
+}
+#team .team-img {
+    width: 90%;
+    /* awal sha8le ba3mla bhet background m3ayne blon hayla lashouf mase7ta aw adeh ekhda ba3den bsir bza8er aw bdaye2 */
+    
+    margin: auto;
+    /* mishen ytwasat  bl nes */
+    
+    position: relative;
+    /* mishen licon maytla3o barat hdoud team-img*/
+}
+#team .team-img img {
+    width: 100%;
+    /*100% mn hajem lbay taba3o yale howe team img li fo2 */
+}
+
+/*  */
+#team .team-overley1 {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 180px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#team .team-overley1 a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(120, 136, 136);
+    color: #e7e8ee;
+    /* am ekhdo hek aa aksa lyamin */
+    
+    font-size: 20px;
+    /* icon mn3amlo mo3amale lkitebe hye zeta */
+    
+    margin-left: auto;
+}
+
+/* icon byw2af bl top lab taba3o //  height taba3 l a yale howe bay li aw licon heteto 40px lama brou7 belo line height 40 px 
+lama belo line height 40px bkoun am elo twastan balb lbay taba3a yale howe la ya3ne nytla3o bnes la la kel wahde   */
+#team .team-overley1 a i {
+    line-height: 40px;
+}
+#team .team-info .team-info-tittle {
+    text-transform: uppercase;
+    padding: 12px 0px;
+    color: rgb(163, 105, 50);
+}
+.team-info-sp1 {
+    font-size: 20px;
+    text-transform: capitalize;
+    color: rgb(12, 97, 100);
+}
+#team .team-item:hover .team-info-tittle {
+    color: #2e2727;
+}
+.team-item:hover .team-info-sp1 {
+    color: brown;
+}
+#team .team-content .team-item {
+    position: relative;
+}
+#team .team-content .team-item::after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: 0.5s;
+    /* Add 'opacity' property to the transition */
+}
+#team .team-content .team-item:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+/* end team section */
+
+/* start icon section  */
+.container6 {
+    padding: 6rem 0;
+    /* margin: 2rem 0; */
+    
+    background-image: url(/images/download\ \(1\).jpg);
+    width: 100%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container6 .all-icon {
+    margin-right: 4%;
+    display: grid;
+    /*bsta3mela bas ykoun ande kaza esem la sheshe lwahde */
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*column shmel ad lyamin a marten */
+    
+    column-gap: 0.5rem;
+    /* li bya3mel mase7a ben she2en ltnen AW BEN LColumn */
+}
+.container6 .all-icon .each-icon-team {
+    text-align: center;
+}
+.container6 .all-icon .each-icon-team i {
+    font-size: 28px;
+    color: rgb(53, 83, 139);
+}
+.container6 .all-icon .each-icon-team h2 {
+    color: #d10c0c;
+    font-size: 25px;
+}
+.container6 .all-icon .each-icon-team h4 {
+    color: rgb(31, 34, 34);
+    font-size: 17px;
+}
+
+/* start blog section */
+.container3 {
+    width: 80%;
+    margin: auto;
+}
+#blog {
+    height: 100vh;
+}
+#blog .blog-content {
+    margin-top: 2rem;
+    display: grid;
+    /*bsta3mela bas ykoun ande kaza esem la sheshe lwahde */
+    
+    grid-template-columns: 2fr 2fr;
+    /*column shmel ad lyamin a marten */
+    
+    column-gap: 2rem;
+    /* li bya3mel mase7a ben she2en ltnen AW BEN LColumn */
+}
+#blog .blog-content .col-1 h3 {
+    font-size: 25px;
+    color: chocolate;
+    margin-top: -20px;
+}
+#blog .blog-content .col-1 hr {
+    width: 180px;
+    height: 5px;
+    background-color: rgba(223, 106, 60, 0.651);
+    margin-top: -3px;
+    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+#blog .blog-content .col-1 p {
+    font-family: 'Young Serif', serif;
+    margin: 20px 0px;
+}
+#blog .blog-content .col-1 i {
+    display: block;
+    padding: 5px 5px;
+    color: rgb(211, 154, 88);
+}
+#blog .blog-content .col-1 span {
+    margin-left: 12px;
+    color: #000000;
+}
+#blog .blog-content .col-2 {
+    width: 90%;
+}
+#blog .blog-content .col-2 .blog-img {
+    width: 100%;
+    background-color: #cccccc;
+    margin-left: 75px;
+}
+#blog .blog-content .col-2 .blog-img img {
+    width: 80%;
+    margin-left: 45px;
+    height: 320px;
+    margin-top: 6px;
+}
+
+/* start section news  */
+#news {
+    height: 100vh;
+    background-color: rgba(210, 105, 30, 0.1);
+    padding-top: 3rem;
+}
+#news .container4 {
+    width: 80% !important;
+    margin: auto;
+    height: 100vh;
+}
+#news .heading {
+    margin-bottom: 30px;
+}
+#news .news-content {
+    background-color: #ceac90;
+    height: 70vh;
+    width: 300px;
+}
+#news .news-content .news-content-item {
+    background-color: rgb(179, 139, 94);
+    height: 70vh;
+    width: 260px;
+    margin-left: 15px;
+    position: relative;
+}
+#news .news-content .news-item-img {
+    height: 180px;
+    margin-bottom: 23px;
+}
+#news .news-content .news-item-img img {
+    height: 180px;
+    width: 200px;
+}
+#news .news-content .news-content-item .news-item-icons {
+    margin-bottom: 10px;
+    color: rgb(83, 38, 38);
+    font-size: 22px;
+}
+#news .news-content .news-content-item .news-item-icons .ii {
+    /*hatet .ii ejbare la ba3ed 2 icon an lba2ye kelon  bade khale awal wahde mahala  */
+    
+    padding: 10px;
+}
+#news .news-content .news-content-item .news-item-icons span {
+    color: black;
+    font-size: 18px;
+}
+#news .news-content .news-content-item h3 {
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+#news .news-content .news-content-item p {
+    margin-bottom: 10px;
+}
+#news .news-content .news-content-item button {
+    background-color: white;
+    border: solid 2px;
+    border-radius: 25px;
+    background-color: #ceac90;
+    width: 80px;
+    height: 20px;
+    margin-left: 25%;
+    margin-top: 15px;
+}
+#news .news-collaps {
+    overflow: auto;
+}
+#news .news-1 {
+    float: left;
+}
+#news .news-2 {
+    float: left;
+    margin: 0 41px;
+}
+#news .news-3 {
+    float: left;
+}
+#news .news-content .news-content-item::after {
+    content: '';
+    width: 0;
+    height: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(20, 19, 19, 0.7);
+    opacity: 0;
+    transition: 0.5s;
+    /* Add 'opacity' property to the transition */
+}
+#news .news-content .news-content-item:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+/* end news */
+.container5 {
+    margin-top: 0px;
+    width: 100%;
+    height: 60vh;
+    background-color: rgba(61, 46, 36, 0.1);
+    background-attachment: fixed;
+    background-image: url(/images//images\ \(7\).jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container5 .cont-5 {
+    margin: 0px 150px;
+    display: grid;
+    /*bsta3mela bas ykoun ande kaza esem la sheshe lwahde */
+    
+    grid-template-columns: 2fr 2fr;
+    /*column shmel ad lyamin a marten */
+    
+    column-gap: 5rem;
+    /* li bya3mel mase7a ben she2en ltnen AW BEN LColumn */
+    
+    padding-top: 120px;
+}
+.container5 .cont-5 .cont5-img-info img {
+    border-radius: 25px;
+}
+.container5 .cont-5 .cont5-img-info .col1-title-img-info {
+    display: inline-block;
+}
+.container5 .cont-5 .cont5-img-info .col1-title-img-info span {
+    color: chocolate
+}
+.container5 .cont-5 .cont5-img-info p {
+    margin: 15px 0px;
+    color: #964411;
+}
+
+/*      ///////////////////////////////////////////////////////////////////*/
+
+/* start footer */
+.container-foot {
+    padding: 2rem 0;
+    width: 100%;
+    height: 60vh;
+    background-color: dimgray;
+}
+.container-foot .foot-content {
+    text-align: center;
+}
+.container-foot .foot-content img {
+    width: 180px;
+    height: 100px;
+    margin-top: 40px;
+}
+.container-foot .foot-content .foot-links {
+    margin: 16px 0px;
+}
+.container-foot .foot-content .foot-links a i {
+    font-size: 20px;
+    padding: 15px;
+    background-color: #0db6cc;
+    border-radius: 50%;
+    color: white;
+    margin-right: 10px;
+    transition: all 2s ease;
+}
+.container-foot .foot-content .foot-links a i:hover {
+    background-color: rgb(6, 31, 85);
+    transform: scale(0.8);
+}
+.container-foot .foot-content h2 {
+    font-size: smaller;
+}
+.container-foot .foot-content h2 span {
+    text-transform: uppercase;
+    font-size: larger;
+}
